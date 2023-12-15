@@ -45,7 +45,7 @@
       weathericon[0].innerHTML = `<i class="fa-solid fa-cloud-rain" style="color: #235ab8;"></i>`;
       weathericon[1].innerHTML = "Rain";
     } else if (data.weather[0].main == "Smoke") {
-      document.body.style.backgroundImage = "url('pic/smoke.avif')";
+      document.body.style.backgroundImage = "url('pic/smoke.jpg')";
       let weathertype = document.querySelector(".typeweather");
       let weathericon = weathertype.querySelectorAll("p");
       weathericon[0].innerHTML = `<i class="fa-solid fa-smog fa-beat" style="color: #1d52af;"></i>`;
@@ -78,9 +78,16 @@
       weathericon[1].innerHTML = "Clear";
     }
   }
+  function pressEnter(event){
+    if(event.keyCode===13){
+      checkwheather();
+    }
+
+  }
 
   searchbtn.addEventListener("click", () => {
     checkwheather();
   });
+  document.addEventListener("keypress",pressEnter);
   
   
