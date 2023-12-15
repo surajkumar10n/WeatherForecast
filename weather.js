@@ -17,7 +17,7 @@
   // }
 
   async function checkwheather() {
-    let searchbox = document.getElementById("searchbox").value;
+    let searchbox = document.getElementById("searchbox").value.trim();
     // console.log(searchbox);
     let res = await fetch(
       `https://api.openweathermap.org/data/2.5/weather?q=${searchbox}&appid=740f85f5dcd4077ed0e1afaec2f82063&units=metric`
