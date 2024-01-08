@@ -1,21 +1,3 @@
-// const myFun = async () => {
-  //     const searchBo = document.getElementById("searchbox").value;
-  //     try {
-  //         let res = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${searchBo}&appid=740f85f5dcd4077ed0e1afaec2f82063&units=metric`)
-  //         const data = await res.json()
-  //         console.log(data)
-  //         document.querySelector(".city").innerHTML = data.name;
-  //         document.querySelector(".temp").innerHTML = Math.round(data.main.temp);
-  //         document.querySelector(".humidity").innerHTML = data.main.humidity;
-  //         document.querySelector(".wind").innerHTML = data.wind.speed + " km/hr";
-
-  //     }
-  //     catch (err) {
-  //         console.log(err)
-  //     }
-
-  // }
-
   async function checkwheather() {
     let searchbox = document.getElementById("searchbox").value.trim();
     // console.log(searchbox);
@@ -88,6 +70,4 @@
   searchbtn.addEventListener("click", () => {
     checkwheather();
   });
-  document.addEventListener("keypress",pressEnter);
-  
-  
+  searchbox.addEventListener("keypress",pressEnter);
